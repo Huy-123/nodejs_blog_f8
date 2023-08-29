@@ -1,0 +1,33 @@
+{
+  "name": "nodejs-log-f8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Huy-123/nodejs_blog_f8.git"
+  },
+  "keywords": [
+    "f8",
+    "nodejs",
+    "f8",
+    "nodejs",
+    "blog"
+  ],
+  "author": "huydang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Huy-123/nodejs_blog_f8/issues"
+  },
+  "homepage": "https://github.com/Huy-123/nodejs_blog_f8#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
