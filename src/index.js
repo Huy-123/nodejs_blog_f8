@@ -4,6 +4,14 @@ const morgan = require('morgan');
 var handlebars  = require('express-handlebars');
 const app = express();
 const port = 3000;
+const route = require('./routes/index')
+
+
+// MiddleWare show data form in body
+app.use(express.urlencoded({
+  extended: true
+}));
+app.use(express.json());
 
 // Static file
 app.use(express.static(path.join(__dirname, 'public')))
@@ -18,13 +26,8 @@ app.engine('hbs', handlebars({
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 
-app.get('/', (req, res) => {
-  res.render('home');
-})
-
-app.get('/news', (req, res) => {
-  res.render('news');
-})
+// Routes init
+route(app);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
